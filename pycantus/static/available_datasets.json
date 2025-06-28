@@ -1,0 +1,13 @@
+{       
+    "sample_dataset" :
+        {
+            "name" : "Sample Dataset",
+            "description" : "This is a sample dataset for testing purposes.",
+            "chants_fallback_url" : "",
+            "sources_fallback_url" : "",
+            "chants_filepath" : "sample_dataset/chants.csv",
+            "sources_filepath" : "sample_dataset/sources.csv",
+            "other_parameters" : "available_dataset",
+            "sumcheck" : "" 
+        }
+}
