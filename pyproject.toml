@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "pycantus"
-version = "0.0.3"
+version = "0.0.4"
 dependencies = [
   "pandas==2.2.2",
   "requests==2.31.0",
@@ -12,16 +12,16 @@ dependencies = [
 ]
 requires-python = ">=3.10"
 authors = [
-  {name = "Anna Dvorakova", email = "anna.dvorakova332@student.cuni.cz"},
-  {name = "Tim Eipert", email = "tim.eipert@uni-wuerzburg.de"},
-  {name = "Jan Hajic jr.", email = "hajicj@ufal.mff.cuni.cz"},
-  {name = "Vojtech Lanz", email = "lanz@ufal.mff.cuni.cz"},
+  {name = "Anna Dvorakova", email = "anna.dvorakova332@student.cuni.XXXX-6"},
+  {name = "Tim Eipert", email = "tim.eipert@uni-wuerzburg.XXXX-6"},
+  {name = "Jan Hajic jr.", email = "hajicj@ufal.mff.cuni.XXXX-6"},
+  {name = "Vojtech Lanz", email = "lanz@ufal.mff.cuni.XXXX-6"},
 ]
 maintainers = [
-  {name = "Tim Eipert", email = "tim.eipert@uni-wuerzburg.de"},
-  {name = "Jan Hajic jr.", email = "hajicj@ufal.mff.cuni.cz"},
-  {name = "Vojtech Lanz", email = "lanz@ufal.mff.cuni.cz"},
-  {name = "Anna Dvorakova", email = "anna.dvorakova332@student.cuni.cz"},
+  {name = "Tim Eipert", email = "tim.eipert@uni-wuerzburg.XXXX-6"},
+  {name = "Jan Hajic jr.", email = "hajicj@ufal.mff.cuni.XXXX-6"},
+  {name = "Vojtech Lanz", email = "lanz@ufal.mff.cuni.XXXX-6"},
+  {name = "Anna Dvorakova", email = "anna.dvorakova332@student.cuni.XXXX-6"},
 ]
 description = "PyCantus: A Python library designed to enhance accessibility of Gregorian chants for both coders and non-coders."
 readme = "README.md"
@@ -44,12 +44,9 @@ tests = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/dact-chant/PyCantus"
-Documentation = "https://github.com/dact-chant/PyCantus/tree/main/docs"
-Repository = "https://github.com/dact-chant/PyCantus.git"
+Homepage = https://anonymous.4open.science/r/PyCantus_anonym-52DD/
+Documentation = https://anonymous.4open.science/r/PyCantus_anonym-52DD/docs
+Repository = https://anonymous.4open.science/r/PyCantus_anonym-52DD
 
 [tool.setuptools.packages.find]
 include = ["pycantus"]
-
-# [pypi]
-# username=__token__
