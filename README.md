@@ -18,12 +18,18 @@ There are two further important classes in the data model: `Melody`, and `Corpus
 
 For an introduction to using PyCantus, run the `tutorial.ipynb` Jupyter notebook.
 
+
+## Documentation
+To easily browse the documentation, open `docs/bulid/html/index.html` file (in your browser).
+
+
 ## Installing PyCantus library locally
 
 1. Clone the repository:
     
     ```git clone [redacted for peer review]```  
-   or obtain the Pycantus_anonym directory via dowload from ... 
+
+   or obtain the Pycantus_anonym directory via dowload from https://anonymous.4open.science/r/PyCantus_anonym-52DD 
 
 2. Go to the root directory of the project
 3. Run the following command:
