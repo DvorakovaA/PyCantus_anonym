@@ -44,9 +44,9 @@ tests = [
 ]
 
 [project.urls]
-Homepage = https://anonymous.4open.science/r/PyCantus_anonym-52DD/
-Documentation = https://anonymous.4open.science/r/PyCantus_anonym-52DD/docs
-Repository = https://anonymous.4open.science/r/PyCantus_anonym-52DD
+Homepage = "https://anonymous.4open.science/r/PyCantus_anonym-52DD/"
+Documentation = "https://anonymous.4open.science/r/PyCantus_anonym-52DD/docs"
+Repository = "https://anonymous.4open.science/r/PyCantus_anonym-52DD"
 
 [tool.setuptools.packages.find]
 include = ["pycantus"]
