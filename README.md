@@ -29,12 +29,12 @@ To easily browse the documentation, open `docs/bulid/html/index.html` file (in y
     
     ```git clone [redacted for peer review]```  
 
-   or obtain the Pycantus_anonym directory via dowload from https://anonymous.4open.science/r/PyCantus_anonym-52DD 
+   or obtain the Pycantus directory via download from [https://anonymous.4open.science/r/PyCantus_anonym-52DD](https://anonymous.4open.science/r/PyCantus_anonym-52DD) (it would not be called `Pycantus` but `PyCantus_anonym-52DD` due to anonymization process).
 
-2. Go to the root directory of the project
+2. Go to the root directory of the project (PyCantus_anonym-52DD in this case)
 3. Run the following command:
 
-    ```pip install -e .```
+    ```pip install .```
    
 4. Import the pycantus library and verify it works:
 
