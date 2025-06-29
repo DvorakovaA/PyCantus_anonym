@@ -13,15 +13,24 @@ from pycantus.filtration.filter import Filter
 
 
 __version__ = "0.0.4"
-__author__ = "Anna Dvorakova"
+__author__ = "XXXX-1 XXXX-2"
 
 
 class Corpus():
     """
-    pycantus Corpus class 
-        - represents a collection of chants and sources (piece of repertoire)
-        - provides methods for loading, filtering, and exporting data related to the chants and sources
-        - can be editable or not (if not, it is locked for editing)
+    Represents a collection of chants and sources (piece of repertoire).
+
+    Attributes:
+        chants_filepath (str): path to file with chants
+        sources_filepath (str, optional): path to file with sources
+        chants_fallback_url (str, optional): URL for chants file download, is used when loading from filepath fails
+        sources_fallback_url (str, optional): URL for sources file download, is used when loading from filepath fails
+        other_download_parameters (dict, optional): [not used yet]
+        is_editable (bool): indicates whether objects in Corpus should be locked
+        check_missing_sources (bool): indicates whether load should an raise exception if some chant refers to source that is not in sources
+        create_missing_sources (bool): indicates whether load should create Source entries for sources referred to in some of the chants and not being present in provided sources
+    
+    Only chants_filepath is mandatory.
     """
     def __init__(self,
                  chants_filepath,
@@ -33,7 +42,11 @@ class Corpus():
                  check_missing_sources=False,
                  create_missing_sources=False,
                  **kwargs):
-        
+        """
+        Initialize the Corpus. 
+
+        Args corresponds to class attributes.
+        """
         self.chants_filepath = chants_filepath
         self.sources_filepath = sources_filepath
         self.chants_fallback_url = chants_fallback_url
@@ -58,17 +71,23 @@ class Corpus():
 
     
     def _lock_chants(self):
-        """ Sets all chants to locked. """
+        """ 
+        Sets all chants to locked. 
+        """
         for c in self._chants:
             c.locked = True
 
     def _lock_sources(self):
-        """ Sets all sources to locked. """
+        """ 
+        Sets all sources to locked. 
+        """
         for s in self._sources:
             s.locked = True
     
     def _lock_melodies(self):
-        """ Sets all sources to locked. """
+        """ 
+        Sets all sources to locked. 
+        """
         for m in self._melodies:
             m.locked = True
 
@@ -101,20 +120,25 @@ class Corpus():
     @property
     def csv_chants_header(self) -> str:
         """
-        Returns proper csv header for chants export to csv
+        Returns proper csv header for chants export to csv.
+        Returns:
+            str: csv header for Chant
         """
         return Chant.header()
 
     @property
     def csv_sources_header(self) -> str:
         """
-        Returns proper csv header for sources export to csv
+        Returns proper csv header for sources export to csv.
+        Returns:
+            str: csv header for Source
         """
         return Source.header()
 
     def export_csv(self, chants_filepath : str, sources_filepath):
         """ 
         Exports the chants and sources to CSV files.
+
         If sources_filepath is not provided, only chants will be exported.
         """
         # Chants
@@ -140,6 +164,7 @@ class Corpus():
     def drop_duplicate_chants(self):
         """
         Discards all chants that have the same chantlink as another chant.
+
         Keeps the last occurrence of each chant.
         """
         chantlinks = [ch.chantlink for ch in self._chants]
@@ -153,6 +178,7 @@ class Corpus():
     def drop_duplicate_sources(self):
         """
         Discards all sources that have the same srclink as another source.
+
         Keeps the last occurrence of each source.
         """
         srclinks = [s.srclink for s in self._sources]
@@ -162,19 +188,12 @@ class Corpus():
                 self._sources.remove(source)
                 srclinks.remove(srclinks[i])
             i += 1
-
-
-    def merge_with(self, to_be_merged, keep_duplicates=True):
-        """
-        Merges the current corpus with another corpus.
-        If keep_duplicates is True, it keeps all chants, sources and possibly melodies from both corpora.
-        """
-        pass
     
     def create_melodies(self):
         """
         Creates Melody objects for all chants in the corpus that has melody encoded
         and stores them in _melodies list - locks if corpus is not editable.
+
         This method should be called after the chants are loaded.
         """
         self._melodies = []
@@ -203,11 +222,9 @@ class Corpus():
 
     def apply_filter(self, filter : Filter):
         """
-        Applies the given filter on its data in "in place" way.
+        Applies the given filter on stored data in "in place" way.
         """
         self._chants, self._sources, self._melodies = filter.apply(self._chants, self._sources, self._melodies)
         #print('Discarding empty sources after filtration...')
         #self.discard_empty_sources()
         #print('Number of chants after filtration:', len(self._chants), '\nNumber of sources after filtration:', len(self._sources))
-        
-
