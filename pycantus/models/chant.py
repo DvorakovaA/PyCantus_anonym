@@ -119,15 +119,15 @@ class Chant():
         if rite is not None:
             self.rite = rite
         else: # add rite based on the genre
-            self. rite = GENRE_TO_RITE.get(genre, None)
+            self.rite = GENRE_TO_RITE.get(genre, None)
         
-        if self.melody is not None:
-            self._has_melody = True
-        else:
-            self._has_melody = False
-
+        self._has_melody = False
         self.melody_object = None
 
+        if self.melody is not None:
+            self._has_melody = True
+            self.melody_object = self.create_melody()
+            
     # setter
     def __setattr__(self, name, value):
         if name != "locked" and getattr(self, "locked", False):

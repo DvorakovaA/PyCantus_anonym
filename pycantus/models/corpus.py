@@ -8,6 +8,7 @@ import pandas as pd
 
 from pycantus.models.chant import Chant
 from pycantus.models.source import Source
+from pycantus.models.melody import Melody
 from pycantus.dataloaders.loader import CsvLoader
 from pycantus.filtration.filter import Filter
 
@@ -63,7 +64,6 @@ class Corpus():
 
         self._chants = chants
         self._sources = sources
-        self._melodies = []
 
         if not self.is_editable:
             self._lock_chants()
@@ -114,8 +114,13 @@ class Corpus():
             raise PermissionError('Corpus is not editable, cannot replace sources list.')
     
     @property #getter
-    def melodies(self):
-        return self._melodies
+    def melody_objects(self) -> list[Melody]:
+        """
+        Collects melody_objects of Chants in self._chants .
+        Returns:
+            list : melody objects of chants in the Corpus
+        """
+        return [ch.melody_object for ch in self._chants]
     
     @property
     def csv_chants_header(self) -> str:
@@ -189,28 +194,11 @@ class Corpus():
                 srclinks.remove(srclinks[i])
             i += 1
     
-    def create_melodies(self):
-        """
-        Creates Melody objects for all chants in the corpus that has melody encoded
-        and stores them in _melodies list - locks if corpus is not editable.
-
-        This method should be called after the chants are loaded.
-        """
-        self._melodies = []
-        for chant in self._chants:
-            chant.create_melody()
-            if chant.melody_object is not None:
-                self._melodies.append(chant.melody_object)
-        if not self.is_editable:
-            self._lock_melodies()
-
     def keep_melodic_chants(self):
         """
         Keeps only chants that have a melody in the corpus.
         """
         self._chants = [ch for ch in self._chants if ch._has_melody]
-        # Just in case, we also need to create melodies again
-        self.create_melodies()
     
     def drop_empty_sources(self):
         """
