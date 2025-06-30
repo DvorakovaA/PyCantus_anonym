@@ -6,9 +6,10 @@
 PyCantus documentation
 ======================
 
-Add your content using ``reStructuredText`` syntax. See the
-`reStructuredText <https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html>`_
-documentation for details.
+PyCantus is envisioned as a Python API to the Cantus family of databases that makes it easy to use this data for 
+computational processing. Primarily we intend this to be used for research in digital chant scholarship, 
+but of course it can be used to build chant-centric apps, new websites, 
+extract data for comparative studies across different repertoires, study liturgy, etc.
 
 
 .. toctree::
