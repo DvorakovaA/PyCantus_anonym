@@ -18,9 +18,7 @@
       <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="pycantus.dataloaders package" href="pycantus.dataloaders.html" />
-    <link rel="prev" title="pycantus" href="modules.html" /> 
+    <link rel="search" title="Search" href="search.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -42,32 +40,24 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="modules.html">pycantus</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">pycantus package</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#subpackages">Subpackages</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="pycantus.dataloaders.html">pycantus.dataloaders package</a></li>
-<li class="toctree-l4"><a class="reference internal" href="pycantus.filtration.html">pycantus.filtration package</a></li>
-<li class="toctree-l4"><a class="reference internal" href="pycantus.models.html">pycantus.models package</a></li>
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">pycantus package</a><ul>
+<li><a class="reference internal" href="#subpackages">Subpackages</a></li>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-pycantus.data">pycantus.data module</a><ul>
+<li><a class="reference internal" href="#pycantus.data.list_available_datasets"><code class="docutils literal notranslate"><span class="pre">list_available_datasets()</span></code></a></li>
+<li><a class="reference internal" href="#pycantus.data.load_dataset"><code class="docutils literal notranslate"><span class="pre">load_dataset()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#module-pycantus.data">pycantus.data module</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#pycantus.data.list_available_datasets"><code class="docutils literal notranslate"><span class="pre">list_available_datasets()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#pycantus.data.load_dataset"><code class="docutils literal notranslate"><span class="pre">load_dataset()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#module-pycantus">Module contents</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#pycantus.hello_pycantus"><code class="docutils literal notranslate"><span class="pre">hello_pycantus()</span></code></a></li>
+<li><a class="reference internal" href="#module-pycantus">Module contents</a><ul>
+<li><a class="reference internal" href="#pycantus.hello_pycantus"><code class="docutils literal notranslate"><span class="pre">hello_pycantus()</span></code></a></li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
-</li>
-</ul>
-
+</div>
         </div>
       </div>
     </nav>
@@ -82,7 +72,6 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="modules.html">pycantus</a></li>
       <li class="breadcrumb-item active">pycantus package</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/pycantus.rst.txt" rel="nofollow"> View page source</a>
@@ -188,7 +177,6 @@
 <li class="toctree-l4"><a class="reference internal" href="pycantus.models.html#pycantus.models.corpus.Corpus.create_missing_sources"><code class="docutils literal notranslate"><span class="pre">Corpus.create_missing_sources</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="pycantus.models.html#pycantus.models.corpus.Corpus.apply_filter"><code class="docutils literal notranslate"><span class="pre">Corpus.apply_filter()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="pycantus.models.html#pycantus.models.corpus.Corpus.chants"><code class="docutils literal notranslate"><span class="pre">Corpus.chants</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="pycantus.models.html#pycantus.models.corpus.Corpus.create_melodies"><code class="docutils literal notranslate"><span class="pre">Corpus.create_melodies()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="pycantus.models.html#pycantus.models.corpus.Corpus.csv_chants_header"><code class="docutils literal notranslate"><span class="pre">Corpus.csv_chants_header</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="pycantus.models.html#pycantus.models.corpus.Corpus.csv_sources_header"><code class="docutils literal notranslate"><span class="pre">Corpus.csv_sources_header</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="pycantus.models.html#pycantus.models.corpus.Corpus.drop_duplicate_chants"><code class="docutils literal notranslate"><span class="pre">Corpus.drop_duplicate_chants()</span></code></a></li>
@@ -196,7 +184,7 @@
 <li class="toctree-l4"><a class="reference internal" href="pycantus.models.html#pycantus.models.corpus.Corpus.drop_empty_sources"><code class="docutils literal notranslate"><span class="pre">Corpus.drop_empty_sources()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="pycantus.models.html#pycantus.models.corpus.Corpus.export_csv"><code class="docutils literal notranslate"><span class="pre">Corpus.export_csv()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="pycantus.models.html#pycantus.models.corpus.Corpus.keep_melodic_chants"><code class="docutils literal notranslate"><span class="pre">Corpus.keep_melodic_chants()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="pycantus.models.html#pycantus.models.corpus.Corpus.melodies"><code class="docutils literal notranslate"><span class="pre">Corpus.melodies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pycantus.models.html#pycantus.models.corpus.Corpus.melody_objects"><code class="docutils literal notranslate"><span class="pre">Corpus.melody_objects</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="pycantus.models.html#pycantus.models.corpus.Corpus.sources"><code class="docutils literal notranslate"><span class="pre">Corpus.sources</span></code></a></li>
 </ul>
 </li>
@@ -295,10 +283,7 @@ If the source filepath is given and not found, it will raise an error.</p>
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="modules.html" class="btn btn-neutral float-left" title="pycantus" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="pycantus.dataloaders.html" class="btn btn-neutral float-right" title="pycantus.dataloaders package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-    </div>
+          <footer>
 
   <hr/>
 

@@ -18,8 +18,7 @@
       <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="pycantus.filtration package" href="pycantus.filtration.html" /> 
+    <link rel="search" title="Search" href="search.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -41,25 +40,104 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="modules.html">pycantus</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="pycantus.html">pycantus package</a><ul class="current">
-<li class="toctree-l3 current"><a class="reference internal" href="pycantus.html#subpackages">Subpackages</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="pycantus.dataloaders.html">pycantus.dataloaders package</a></li>
-<li class="toctree-l4"><a class="reference internal" href="pycantus.filtration.html">pycantus.filtration package</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="#">pycantus.models package</a></li>
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">pycantus.models package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-pycantus.models.chant">pycantus.models.chant module</a><ul>
+<li><a class="reference internal" href="#pycantus.models.chant.Chant"><code class="docutils literal notranslate"><span class="pre">Chant</span></code></a><ul>
+<li><a class="reference internal" href="#pycantus.models.chant.Chant.siglum"><code class="docutils literal notranslate"><span class="pre">Chant.siglum</span></code></a></li>
+<li><a class="reference internal" href="#pycantus.models.chant.Chant.srclink"><code class="docutils literal notranslate"><span class="pre">Chant.srclink</span></code></a></li>
+<li><a class="reference internal" href="#pycantus.models.chant.Chant.chantlink"><code class="docutils literal notranslate"><span class="pre">Chant.chantlink</span></code></a></li>
+<li><a class="reference internal" href="#pycantus.models.chant.Chant.folio"><code class="docutils literal notranslate"><span class="pre">Chant.folio</span></code></a></li>
+<li><a class="reference internal" href="#pycantus.models.chant.Chant.sequence"><code class="docutils literal notranslate"><span class="pre">Chant.sequence</span></code></a></li>
+<li><a class="reference internal" href="#pycantus.models.chant.Chant.incipit"><code class="docutils literal notranslate"><span class="pre">Chant.incipit</span></code></a></li>
+<li><a class="reference internal" href="#pycantus.models.chant.Chant.feast"><code class="docutils literal notranslate"><span class="pre">Chant.feast</span></code></a></li>
+<li><a class="reference internal" href="#pycantus.models.chant.Chant.genre"><code class="docutils literal notranslate"><span class="pre">Chant.genre</span></code></a></li>
+<li><a class="reference internal" href="#pycantus.models.chant.Chant.office"><code class="docutils literal notranslate"><span class="pre">Chant.office</span></code></a></li>
+<li><a class="reference internal" href="#pycantus.models.chant.Chant.position"><code class="docutils literal notranslate"><span class="pre">Chant.position</span></code></a></li>
+<li><a class="reference internal" href="#pycantus.models.chant.Chant.cantus_id"><code class="docutils literal notranslate"><span class="pre">Chant.cantus_id</span></code></a></li>
+<li><a class="reference internal" href="#pycantus.models.chant.Chant.melody_id"><code class="docutils literal notranslate"><span class="pre">Chant.melody_id</span></code></a></li>
+<li><a class="reference internal" href="#pycantus.models.chant.Chant.image"><code class="docutils literal notranslate"><span class="pre">Chant.image</span></code></a></li>
+<li><a class="reference internal" href="#pycantus.models.chant.Chant.mode"><code class="docutils literal notranslate"><span class="pre">Chant.mode</span></code></a></li>
+<li><a class="reference internal" href="#pycantus.models.chant.Chant.full_text"><code class="docutils literal notranslate"><span class="pre">Chant.full_text</span></code></a></li>
+<li><a class="reference internal" href="#pycantus.models.chant.Chant.melody"><code class="docutils literal notranslate"><span class="pre">Chant.melody</span></code></a></li>
+<li><a class="reference internal" href="#pycantus.models.chant.Chant.century"><code class="docutils literal notranslate"><span class="pre">Chant.century</span></code></a></li>
+<li><a class="reference internal" href="#pycantus.models.chant.Chant.db"><code class="docutils literal notranslate"><span class="pre">Chant.db</span></code></a></li>
+<li><a class="reference internal" href="#pycantus.models.chant.Chant.rite"><code class="docutils literal notranslate"><span class="pre">Chant.rite</span></code></a></li>
+<li><a class="reference internal" href="#pycantus.models.chant.Chant.locked"><code class="docutils literal notranslate"><span class="pre">Chant.locked</span></code></a></li>
+<li><a class="reference internal" href="#pycantus.models.chant.Chant._has_melody"><code class="docutils literal notranslate"><span class="pre">Chant._has_melody</span></code></a></li>
+<li><a class="reference internal" href="#pycantus.models.chant.Chant.melody_object"><code class="docutils literal notranslate"><span class="pre">Chant.melody_object</span></code></a></li>
+<li><a class="reference internal" href="#pycantus.models.chant.Chant.create_melody"><code class="docutils literal notranslate"><span class="pre">Chant.create_melody()</span></code></a></li>
+<li><a class="reference internal" href="#pycantus.models.chant.Chant.header"><code class="docutils literal notranslate"><span class="pre">Chant.header()</span></code></a></li>
+<li><a class="reference internal" href="#pycantus.models.chant.Chant.to_csv_row"><code class="docutils literal notranslate"><span class="pre">Chant.to_csv_row</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="pycantus.html#submodules">Submodules</a></li>
-<li class="toctree-l3"><a class="reference internal" href="pycantus.html#module-pycantus.data">pycantus.data module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="pycantus.html#module-pycantus">Module contents</a></li>
+<li><a class="reference internal" href="#pycantus.models.chant.get_rite_dict"><code class="docutils literal notranslate"><span class="pre">get_rite_dict()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-pycantus.models.corpus">pycantus.models.corpus module</a><ul>
+<li><a class="reference internal" href="#pycantus.models.corpus.Corpus"><code class="docutils literal notranslate"><span class="pre">Corpus</span></code></a><ul>
+<li><a class="reference internal" href="#pycantus.models.corpus.Corpus.chants_filepath"><code class="docutils literal notranslate"><span class="pre">Corpus.chants_filepath</span></code></a></li>
+<li><a class="reference internal" href="#pycantus.models.corpus.Corpus.sources_filepath"><code class="docutils literal notranslate"><span class="pre">Corpus.sources_filepath</span></code></a></li>
+<li><a class="reference internal" href="#pycantus.models.corpus.Corpus.chants_fallback_url"><code class="docutils literal notranslate"><span class="pre">Corpus.chants_fallback_url</span></code></a></li>
+<li><a class="reference internal" href="#pycantus.models.corpus.Corpus.sources_fallback_url"><code class="docutils literal notranslate"><span class="pre">Corpus.sources_fallback_url</span></code></a></li>
+<li><a class="reference internal" href="#pycantus.models.corpus.Corpus.other_download_parameters"><code class="docutils literal notranslate"><span class="pre">Corpus.other_download_parameters</span></code></a></li>
+<li><a class="reference internal" href="#pycantus.models.corpus.Corpus.is_editable"><code class="docutils literal notranslate"><span class="pre">Corpus.is_editable</span></code></a></li>
+<li><a class="reference internal" href="#pycantus.models.corpus.Corpus.check_missing_sources"><code class="docutils literal notranslate"><span class="pre">Corpus.check_missing_sources</span></code></a></li>
+<li><a class="reference internal" href="#pycantus.models.corpus.Corpus.create_missing_sources"><code class="docutils literal notranslate"><span class="pre">Corpus.create_missing_sources</span></code></a></li>
+<li><a class="reference internal" href="#pycantus.models.corpus.Corpus.apply_filter"><code class="docutils literal notranslate"><span class="pre">Corpus.apply_filter()</span></code></a></li>
+<li><a class="reference internal" href="#pycantus.models.corpus.Corpus.chants"><code class="docutils literal notranslate"><span class="pre">Corpus.chants</span></code></a></li>
+<li><a class="reference internal" href="#pycantus.models.corpus.Corpus.csv_chants_header"><code class="docutils literal notranslate"><span class="pre">Corpus.csv_chants_header</span></code></a></li>
+<li><a class="reference internal" href="#pycantus.models.corpus.Corpus.csv_sources_header"><code class="docutils literal notranslate"><span class="pre">Corpus.csv_sources_header</span></code></a></li>
+<li><a class="reference internal" href="#pycantus.models.corpus.Corpus.drop_duplicate_chants"><code class="docutils literal notranslate"><span class="pre">Corpus.drop_duplicate_chants()</span></code></a></li>
+<li><a class="reference internal" href="#pycantus.models.corpus.Corpus.drop_duplicate_sources"><code class="docutils literal notranslate"><span class="pre">Corpus.drop_duplicate_sources()</span></code></a></li>
+<li><a class="reference internal" href="#pycantus.models.corpus.Corpus.drop_empty_sources"><code class="docutils literal notranslate"><span class="pre">Corpus.drop_empty_sources()</span></code></a></li>
+<li><a class="reference internal" href="#pycantus.models.corpus.Corpus.export_csv"><code class="docutils literal notranslate"><span class="pre">Corpus.export_csv()</span></code></a></li>
+<li><a class="reference internal" href="#pycantus.models.corpus.Corpus.keep_melodic_chants"><code class="docutils literal notranslate"><span class="pre">Corpus.keep_melodic_chants()</span></code></a></li>
+<li><a class="reference internal" href="#pycantus.models.corpus.Corpus.melody_objects"><code class="docutils literal notranslate"><span class="pre">Corpus.melody_objects</span></code></a></li>
+<li><a class="reference internal" href="#pycantus.models.corpus.Corpus.sources"><code class="docutils literal notranslate"><span class="pre">Corpus.sources</span></code></a></li>
 </ul>
 </li>
 </ul>
 </li>
+<li><a class="reference internal" href="#module-pycantus.models.melody">pycantus.models.melody module</a><ul>
+<li><a class="reference internal" href="#pycantus.models.melody.Melody"><code class="docutils literal notranslate"><span class="pre">Melody</span></code></a><ul>
+<li><a class="reference internal" href="#pycantus.models.melody.Melody.chantlink"><code class="docutils literal notranslate"><span class="pre">Melody.chantlink</span></code></a></li>
+<li><a class="reference internal" href="#pycantus.models.melody.Melody.cantus_id"><code class="docutils literal notranslate"><span class="pre">Melody.cantus_id</span></code></a></li>
+<li><a class="reference internal" href="#pycantus.models.melody.Melody.raw_volpiano"><code class="docutils literal notranslate"><span class="pre">Melody.raw_volpiano</span></code></a></li>
+<li><a class="reference internal" href="#pycantus.models.melody.Melody.mode"><code class="docutils literal notranslate"><span class="pre">Melody.mode</span></code></a></li>
+<li><a class="reference internal" href="#pycantus.models.melody.Melody.locked"><code class="docutils literal notranslate"><span class="pre">Melody.locked</span></code></a></li>
+<li><a class="reference internal" href="#pycantus.models.melody.Melody.clean_volpiano"><code class="docutils literal notranslate"><span class="pre">Melody.clean_volpiano()</span></code></a></li>
+<li><a class="reference internal" href="#pycantus.models.melody.Melody.discard_differentia"><code class="docutils literal notranslate"><span class="pre">Melody.discard_differentia()</span></code></a></li>
+<li><a class="reference internal" href="#pycantus.models.melody.Melody.expand_accidentals"><code class="docutils literal notranslate"><span class="pre">Melody.expand_accidentals()</span></code></a></li>
+<li><a class="reference internal" href="#pycantus.models.melody.Melody.get_range"><code class="docutils literal notranslate"><span class="pre">Melody.get_range()</span></code></a></li>
+<li><a class="reference internal" href="#pycantus.models.melody.Melody.normalize_liquescents"><code class="docutils literal notranslate"><span class="pre">Melody.normalize_liquescents()</span></code></a></li>
 </ul>
-
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-pycantus.models.source">pycantus.models.source module</a><ul>
+<li><a class="reference internal" href="#pycantus.models.source.Source"><code class="docutils literal notranslate"><span class="pre">Source</span></code></a><ul>
+<li><a class="reference internal" href="#pycantus.models.source.Source.title"><code class="docutils literal notranslate"><span class="pre">Source.title</span></code></a></li>
+<li><a class="reference internal" href="#pycantus.models.source.Source.srclink"><code class="docutils literal notranslate"><span class="pre">Source.srclink</span></code></a></li>
+<li><a class="reference internal" href="#pycantus.models.source.Source.siglum"><code class="docutils literal notranslate"><span class="pre">Source.siglum</span></code></a></li>
+<li><a class="reference internal" href="#pycantus.models.source.Source.numeric_century"><code class="docutils literal notranslate"><span class="pre">Source.numeric_century</span></code></a></li>
+<li><a class="reference internal" href="#pycantus.models.source.Source.century"><code class="docutils literal notranslate"><span class="pre">Source.century</span></code></a></li>
+<li><a class="reference internal" href="#pycantus.models.source.Source.provenance"><code class="docutils literal notranslate"><span class="pre">Source.provenance</span></code></a></li>
+<li><a class="reference internal" href="#pycantus.models.source.Source.cursus"><code class="docutils literal notranslate"><span class="pre">Source.cursus</span></code></a></li>
+<li><a class="reference internal" href="#pycantus.models.source.Source.locked"><code class="docutils literal notranslate"><span class="pre">Source.locked</span></code></a></li>
+<li><a class="reference internal" href="#pycantus.models.source.Source.header"><code class="docutils literal notranslate"><span class="pre">Source.header()</span></code></a></li>
+<li><a class="reference internal" href="#pycantus.models.source.Source.to_csv_row"><code class="docutils literal notranslate"><span class="pre">Source.to_csv_row</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-pycantus.models">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
         </div>
       </div>
     </nav>
@@ -74,8 +152,6 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="modules.html">pycantus</a></li>
-          <li class="breadcrumb-item"><a href="pycantus.html">pycantus package</a></li>
       <li class="breadcrumb-item active">pycantus.models package</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/pycantus.models.rst.txt" rel="nofollow"> View page source</a>
@@ -505,14 +581,6 @@ It provides methods for loading, filtering, and exporting data related to the ch
 <em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">chants</span></span><a class="headerlink" href="#pycantus.models.corpus.Corpus.chants" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
-<dl class="py method">
-<dt class="sig sig-object py" id="pycantus.models.corpus.Corpus.create_melodies">
-<span class="sig-name descname"><span class="pre">create_melodies</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pycantus.models.corpus.Corpus.create_melodies" title="Link to this definition"></a></dt>
-<dd><p>Creates Melody objects for all chants in the corpus that has melody encoded
-and stores them in _melodies list - locks if corpus is not editable.</p>
-<p>This method should be called after the chants are loaded.</p>
-</dd></dl>
-
 <dl class="py property">
 <dt class="sig sig-object py" id="pycantus.models.corpus.Corpus.csv_chants_header">
 <em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">csv_chants_header</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#pycantus.models.corpus.Corpus.csv_chants_header" title="Link to this definition"></a></dt>
@@ -563,9 +631,12 @@ and stores them in _melodies list - locks if corpus is not editable.</p>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="pycantus.models.corpus.Corpus.melodies">
-<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">melodies</span></span><a class="headerlink" href="#pycantus.models.corpus.Corpus.melodies" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dt class="sig sig-object py" id="pycantus.models.corpus.Corpus.melody_objects">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">melody_objects</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pycantus.models.melody.Melody" title="pycantus.models.melody.Melody"><span class="pre">Melody</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#pycantus.models.corpus.Corpus.melody_objects" title="Link to this definition"></a></dt>
+<dd><p>Collects melody_objects of Chants in self._chants .
+:returns: melody objects of chants in the Corpus
+:rtype: list</p>
+</dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pycantus.models.corpus.Corpus.sources">
@@ -836,9 +907,7 @@ It provides methods for creating, modifying, and exporting source data in a stan
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="pycantus.filtration.html" class="btn btn-neutral float-left" title="pycantus.filtration package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-    </div>
+          <footer>
 
   <hr/>
 
