@@ -126,7 +126,7 @@ class Chant():
 
         if self.melody is not None:
             self._has_melody = True
-            self.melody_object = self.create_melody()
+            self.create_melody()
             
     # setter
     def __setattr__(self, name, value):

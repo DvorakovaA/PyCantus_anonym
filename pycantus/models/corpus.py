@@ -84,12 +84,6 @@ class Corpus():
         for s in self._sources:
             s.locked = True
     
-    def _lock_melodies(self):
-        """ 
-        Sets all sources to locked. 
-        """
-        for m in self._melodies:
-            m.locked = True
 
     @property #getter
     def chants(self):
@@ -120,7 +114,7 @@ class Corpus():
         Returns:
             list : melody objects of chants in the Corpus
         """
-        return [ch.melody_object for ch in self._chants]
+        return [ch.melody_object for ch in self._chants if ch._has_melody]
     
     @property
     def csv_chants_header(self) -> str:
@@ -212,7 +206,7 @@ class Corpus():
         """
         Applies the given filter on stored data in "in place" way.
         """
-        self._chants, self._sources, self._melodies = filter.apply(self._chants, self._sources, self._melodies)
+        self._chants, self._sources = filter.apply(self._chants, self._sources)
         #print('Discarding empty sources after filtration...')
         #self.discard_empty_sources()
         #print('Number of chants after filtration:', len(self._chants), '\nNumber of sources after filtration:', len(self._sources))

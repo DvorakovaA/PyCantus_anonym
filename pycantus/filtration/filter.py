@@ -20,7 +20,6 @@ class Filter:
     Base class for filters over Corpus data lists:
         - chants - objects of class pycantus.models.Chant
         - sources - objects of class pycantus.models.Source
-        - melodies - objects of class pycantus.models.Melody
     
     Attributes:
         name (str): Name of the filter, used in export.
@@ -77,7 +76,7 @@ class Filter:
         self.filters_exclude[field] = list(set(self.filters_exclude[field])) # discard dupliates
 
     
-    def apply(self, chants : list, sources : list, melodies : list) -> tuple[list]:
+    def apply(self, chants : list, sources : list) -> tuple[list]:
         """
         Apply the filter to the given data.
         If no values for field are specified we expect that user does not care about the field.
@@ -86,17 +85,15 @@ class Filter:
         Args:
             chants (list): 
             source (list):
-            melodies (list):
 
         Returns:
             list: 
-            list:
             list:
         """
         filter_fields = set(self.filters_include.keys()).union(self.filters_exclude.keys())
         if len(filter_fields) == 0:
             print("No filtering applied because no filtration values were present, returning original lists.")
-            return chants, sources, melodies
+            return chants, sources
 
         filtered_sources= []
         discarded_srclinks = set()
@@ -144,17 +141,8 @@ class Filter:
                     filtered_chants.append(chant)
 
             chants = filtered_chants
-             
-        if len(melodies) > 0:
-            filtered_melodic_chantlinks = {chant.chantlink for chant in chants if chant._has_melody}
-            # Discard melodies that are not in the filtered chants
-            filtered_melodies = []
-            for melody in melodies:
-                if melody is not None and melody.chantlink in filtered_melodic_chantlinks:
-                    filtered_melodies.append(melody)
-            melodies = filtered_melodies
 
-        return chants, sources, melodies
+        return chants, sources
 
     def delete_field(self, field):
         """
